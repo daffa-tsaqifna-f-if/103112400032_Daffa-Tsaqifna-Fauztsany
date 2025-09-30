@@ -10,38 +10,162 @@ Jurnal lain menekankan bahwa penguasaan operator dalam pemrograman C dan C++ san
 
 Dalam pelaksanaan praktikum, digunakan juga panduan teknis berupa modul praktikum yang menekankan pada penggunaan IDE (Integrated Development Environment) seperti Codeblocks agar proses penulisan kode, kompilasi, hingga debugging berjalan efisien dan terstruktur [Modul Praktikum Informatika, 2025].
 
-### A. ...<br/>
-...
-#### 1. ...
-#### 2. ...
-#### 3. ...
-
-### B. ...<br/>
-...
-#### 1. ...
-#### 2. ...
-#### 3. ...
 
 ## Guided 
 
-### 1. ...
+### 1.
 
 ```C++
-source code guided 1
+#include<iostream>
+using namespace std;
+
+int main() {
+    int angka;
+    cout << "Masukkan angka pertama: ";
+    cin >> angka;
+    cout << "Masukkan yang dimaskukan adalah " << angka << endl;
+    return 0;
+}
 ```
 penjelasan singkat guided 1
 
-### 2. ...
+### 2. 
 
 ```C++
-source code guided 2
+#include<iostream>
+using namespace std;
+
+int main() {
+    int angka1, angka2;
+    cout << "Masukkan angka pertama: ";
+    cin >> angka1;
+    cout << "Masukkan angka kedua: ";
+    cin >> angka2;
+
+    cout << "penjumlahan: " << angka1 + angka2 << endl;
+    cout << "pengurangan: " << angka1 - angka2 << endl;
+    cout << "perkalian: " << angka1 * angka2 << endl;
+    cout << "pembagian: " << angka1 / angka2 << endl;
+    cout << "modulus: " << angka1 % angka2 << endl;
+
+    return 0;
+}
 ```
 penjelasan singkat guided 2
 
-### 3. ...
+### 3. 
 
 ```C++
-source code guided 3
+#include<iostream>
+using namespace std;
+
+int main() {
+    int angka1, angka2, Pilihan;
+    cout << "Masukkan angka pertama: ";
+    cin >> angka1;
+    cout << "Masukkan angka kedua: ";
+    cin >> angka2;
+
+    if (angka1 > angka2 ) {
+        cout << angka1 << " lebih dari " << angka2 << endl;
+    } else {
+        cout << angka1 << " kurang dari " << angka2 << endl;
+    }
+
+    if (angka1 == angka2) {
+        cout << angka1 << " sama dengan " << angka2 << endl;
+    } else if (angka1 != angka2) {
+        cout << " angka berbeda " << endl;
+    }
+
+     int pilihan;
+    cout << "MENU" << endl;
+    cout << "1. Penjumlahan" << endl;
+    cout << "2. Pengurangan" << endl;
+    cout << "masukan pilihan: ";
+    cin >> pilihan;
+
+    switch (pilihan){
+        case 1:
+        cout << "Penjumlahan :" << angka1 + angka2 << endl;
+        cout << endl;
+        break; 
+        case 2:
+        cout << "Pengurangan :" << angka1 - angka2 << endl;
+        cout << endl;
+        break;
+        default:
+        cout << "Pilihan Salah" << endl;
+
+    }
+    return 0;
+}
+```
+penjelasan singkat guided 3
+
+### 4. 
+
+```C++
+#include <iostream>
+using namespace std;
+
+ int main(){
+    int angka1;
+    cout << "masukan angka1 : ";
+    cin >> angka1;
+
+    for (int i = 0; i  < angka1; i++){
+      cout << i << " - ";
+    }
+    cout << endl;
+
+    int j = 10;
+    while (j > angka1){
+      cout << j << " - ";
+      j--;
+    }
+
+    cout << endl;
+    int k = 10;
+    do {
+      cout << k << " - ";
+    }while (k < angka1);
+
+     return  0;
+    
+ }
+```
+penjelasan singkat guided 3
+
+### 5. 
+
+```C++
+#include<iostream>
+using namespace std;
+
+int main(){
+    const int MAX = 5;
+    struct rapot{
+        string nama;
+        float nilai;
+    };
+    rapot siswa[MAX];
+
+    for(int i = 0; i < MAX; i++){
+        cout << "masukkan nama siswa : ";
+        cin >> siswa[i].nama;
+        cout << endl;
+        cout << "masukkan nilai siswa : ";
+        cin >> siswa[i].nilai;
+    }
+
+    int j = 0;
+    while(j < MAX){
+        cout << "nama siswa : " << siswa[j].nama << ", nilai : " << siswa[j].nilai << endl;
+        j++;
+    }
+    return 0;
+}
 ```
 penjelasan singkat guided 3
 
@@ -50,7 +174,30 @@ penjelasan singkat guided 3
 ### 1. (isi dengan soal unguided 1)
 
 ```C++
-source code unguided 1
+#include <iostream>
+using namespace std;
+
+int input(int &angka, int &angka2) {
+    cout<<"Masukkan angka pertama: ";
+    cin>>angka;
+    cout<<"Masukkan angka kedua: ";
+    cin>>angka2;
+    return 0;
+}
+
+void output(int angka, int angka2) {
+    cout<<"hasil penjumlahan: "<<angka+angka2<<endl;
+    cout<<"hasil pengurangan: "<<angka-angka2<<endl;
+    cout<<"hasil perkalian: "<<angka*angka2<<endl;
+    cout<<"hasil pembagian: "<<angka/angka2<<endl;
+}
+
+int main() {
+    int x,y;
+    input(x,y);
+    output(x,y);
+    return 0;
+}
 ```
 ### Output Unguided 1 :
 
@@ -63,11 +210,61 @@ penjelasan unguided 1
 ### 2. (isi dengan soal unguided 2)
 
 ```C++
-source code unguided 2
+#include <iostream>
+using namespace std;
+
+int input(int &angka){
+    while(true){
+        cout << "Masukkan angka: ";
+        cin >> angka;
+        if (angka >100){
+            cout <<"input lebih dari 100 coba lagi"<<endl;
+            continue;
+        }else{
+            break;
+        }
+    }
+    return 0;
+}
+
+void text(int angka){
+    int satuan, puluhan;
+    string less[] = {"nol", "satu", "dua", "tiga", "empat", "lima", "enam", "tujuh", "delapan", "sembilan", "sepuluh"};
+    string specific[] = {"belas","puluh"};
+    string text;
+    //check
+    if (angka <=10){
+        cout << angka<<" : "<<less [angka];
+        }else if(angka == 100){
+            cout<<"seratus";
+            }else{
+                satuan = angka % 10;
+                puluhan = (angka / 10) % 10;
+                if (puluhan == 1){
+                    switch (satuan){
+                    case 1:
+                        cout<<angka<<" : "<<"sebelas";
+                    default:
+                        text = less[satuan]+" "+specific[0];
+                        cout<<angka<<" : "<<text;
+                    }
+                }else {
+                    text = less[puluhan]+" "+specific[1]+" "+less[satuan];
+                    cout<<angka<<" : "<<text;
+                    }
+     };
+}
+
+int main() {
+    int x;
+    input(x);
+    text(x);
+    return 0;
+}
 ```
 ### Output Unguided 2 :
 
-##### Output 1
+##### Output 2
 ![Deskripsi Gambar](https://raw.githubusercontent.com/daffa-tsaqifna-f-if/103112400032_Daffa-Tsaqifna-Fauztsany/main/meet%201/unguided%20output/output-2.png)
 
 
@@ -76,11 +273,53 @@ penjelasan unguided 2
 ### 3. (isi dengan soal unguided 3)
 
 ```C++
-source code unguided 3
+#include <iostream>
+using namespace std;
+
+int input(int &angka){
+    cout << "Masukkan angka: ";
+    cin >> angka;
+    return 0;
+}
+
+int output(int &angka){
+    for (int i = angka; i >= 1; i--) {
+        for (int s = 0; s < (angka - i) * 2; s++) {
+            cout << " ";
+        }
+
+        for (int j = i; j >= 1; j--) {
+            cout << j << " ";
+        }
+
+        cout << "* ";
+
+        for (int j = 1; j <= i; j++) {
+            cout << j;
+            if (j != i) cout << " ";
+        }
+
+        cout << endl;
+    }
+
+    for (int s = 0; s < angka * 2; s++) {
+        cout << " ";
+    }
+    cout << "*" << endl;
+
+    return 0;
+}
+
+int main() {
+    int x;
+    input(x);
+    output(x);      
+    return 0;
+}
 ```
 ### Output Unguided 3 :
 
-##### Output 1
+##### Output 3
 ![Deskripsi Gambar](https://raw.githubusercontent.com/daffa-tsaqifna-f-if/103112400032_Daffa-Tsaqifna-Fauztsany/main/meet%201/unguided%20output/output-3.png)
 
 penjelasan unguided 3
