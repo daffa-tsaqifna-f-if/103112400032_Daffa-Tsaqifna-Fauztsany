@@ -204,16 +204,22 @@ penjelasan singkat guided 6
 Diketahui 2 buah matriks 3x3 seperti dibawah ini : 
  
 matriksA = [
- 7 12 22
- 31 6 41
- 15 19 36
+
+7 12 22
+
+31 6 41
+
+15 19 36
  ] 
  
  
  MatriksB = [
- 11 34 7
- 3 25 41
- 5 18 33
+
+11 34 7
+
+3 25 41
+
+5 18 33
  ]       
  
 Buatlah program yang dapat melakukan operasi penjumlahan, pengurangan, dan perkalian 
