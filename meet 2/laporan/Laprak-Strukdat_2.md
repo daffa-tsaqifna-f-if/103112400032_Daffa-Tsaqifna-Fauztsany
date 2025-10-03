@@ -203,24 +203,23 @@ penjelasan singkat guided 6
 ### 1. 
 Diketahui 2 buah matriks 3x3 seperti dibawah ini : 
  
-matriksA = [
+matriksA =
 
-7 12 22
+[7 12 22
 
 31 6 41
 
-15 19 36
- ] 
+15 19 36]
  
  
- MatriksB = [
+ 
+ MatriksB = 
 
-11 34 7
+[11 34 7
 
 3 25 41
 
-5 18 33
- ]       
+5 18 33]
  
 Buatlah program yang dapat melakukan operasi penjumlahan, pengurangan, dan perkalian 
 matriks 3x3 tersebut. Buat prosedur untuk masing-masing operasi yang dilakukan; 
