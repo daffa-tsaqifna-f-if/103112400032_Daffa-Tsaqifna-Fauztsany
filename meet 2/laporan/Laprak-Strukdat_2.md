@@ -207,7 +207,8 @@ matriksA = [
  7 12 22
  31 6 41
  15 19 36
- ]      MatriksB = [
+ ] 
+ MatriksB = [
  11 34 7
  3 25 41
  5 18 33
@@ -366,7 +367,6 @@ Syarat: Proses perhitungan ini wajib menggunakan ptrPanjang dan ptrLebar.
 pointer ptrPanjang dan ptrLebar. 
 6) Cetak nilai panjang dan lebar yang baru untuk membuktikan bahwa 
 nilainya telah berubah. 
-Ekspektasi Output :
 
 ```C++
 #include <iostream>
