@@ -1,5 +1,5 @@
 # <h1 align="center">Laporan Praktikum Modul 1 - Codeblocks IDE & Pengenalan Bahas C++ (Bagian Pertama)</h1>
-<p align="center">Muhammad Dhimas Hafizh Fathurrahman - 2311102151</p>
+<p align="center">Daffa Tsaqifna Fauztsany - 103112400032</p>
 
 ## Dasar Teori
 Bahasa pemrograman C/C++ sangat penting untuk membekali siswa dengan pengetahuan dan keterampilan dasar pemrograman agar mereka mampu membangun aplikasi sederhana serta siap menghadapi dunia kerja yang menuntut kemampuan pemrograman [1]. Pelatihan berfokus tidak hanya pada praktik sintaks, variabel, tipe data, operator, penggunaan loop, kondisi, dan fungsi, tetapi juga pengembangan solusi yang logis dan efektif menggunakan algoritma [1].
