@@ -352,7 +352,21 @@ int main() {
 
 penjelasan unguided 1 
 
-### 2. (isi dengan soal unguided 2)
+### 2. 
+Buatlah program menghitung luas dan keliling persegi panjang dengan proses perhitungan 
+dan perubahan nilainya menggunakan pointer, seperti berikut: 
+1) Buatlah 3 variabel integer di fungsi main(): panjang (beri nilai 10), lebar (beri nilai 5), dan 
+luas (beri nilai 0). 
+2) Deklarasikan dua pointer: ptrPanjang yang menunjuk ke variabel panjang, dan ptrLebar 
+yang menunjuk ke variabel lebar.  
+3) Hitung luas persegi panjang tersebut dan simpan hasilnya ke dalam variabel luas. 
+Syarat: Proses perhitungan ini wajib menggunakan ptrPanjang dan ptrLebar. 
+4) Cetak nilai luas ke layar. 
+5) Setelah itu, ubah nilai panjang menjadi 12 dan lebar menjadi 6, juga hanya melalui 
+pointer ptrPanjang dan ptrLebar. 
+6) Cetak nilai panjang dan lebar yang baru untuk membuktikan bahwa 
+nilainya telah berubah. 
+Ekspektasi Output :
 
 ```C++
 #include <iostream>
