@@ -1,12 +1,12 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-
-void tamplikankanHasil(int arr[2][2]) {
-    for (int i = 0; i < 2; i++){
-        for (int j = 0; j < 2; i++){
-            cout << arr[i][j] << " ";
+void tampilkanhasil(int arr[2][2])
+{
+    for (int i=0; i<2; i++){
+        for (int j=0; j<2; j++){
+            cout<<arr[i][j]<<" ";
         }
-        cout << endl;
+        cout<<endl;
     }
 }
 int main() {
@@ -20,23 +20,27 @@ int main() {
     };
     int arrC[2][2]={0};
     int arrD[2][2]={0};
-    //penjumlahan matriks 2x2
-    for (int i = 0; i < 2; i++){
-        for (int j = 0; j < 2; j++){
-            arrC[i][j] = arrA[i][j] + arrB[i][j];
+      
+    //pnjumlahan matriks 2x2
+    for (int i=0; i<2; i++){
+        for (int j=0; j<2; j++){
+            arrC[i][j]=arrA[i][j]+arrB[i][j];
         }
     }
-    cout << "Hasil penjumlahan matrik adalah: " << endl;
-    tamplikankanHasil(arrC);
+    cout<<"Hasil penjumlahan : "<<endl;
+    tampilkanhasil(arrC);
+
     //perkalian matriks 2x2
-    for (int i = 0; i < 2; i++){                                  //perualangan baris  
-        for (int j = 0; j < 2; j++){                             //perualangan kolom
-            for (int k = 0; k < 2; k++){                       //perulangan perkalian
-                arrD[i][j] += arrA[i][k] * arrB[k][j];
+    for (int i=0; i<2; i++){
+        for (int j=0; j<2; j++){
+            for (int k=0; k<2; k++){
+                arrD[i][j]+=arrA[i][k]*arrB[k][j];
             }
         }
     }
-    cout << "Hasil perkalian : " << endl;
-    tamplikankanHasil(arrD);
+    cout<<"Hasil perkalian : "<<endl;
+    tampilkanhasil(arrD);
+    
     return 0;
+
 }
