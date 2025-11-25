@@ -27,7 +27,7 @@ int main() {
     return 0;
 }
 ```
-penjelasan singkat guided 1
+Program C++ sederhana ini meminta pengguna untuk memasukkan sebuah angka melalui input keyboard. Setelah pengguna memasukkan angka tersebut, program kemudian menampilkan kembali angka yang telah dimasukkan ke layar.
 
 ### 2. 
 
@@ -51,7 +51,7 @@ int main() {
     return 0;
 }
 ```
-penjelasan singkat guided 2
+Program C++ ini meminta pengguna memasukkan dua angka. Setelah kedua angka diterima, program melakukan beberapa operasi aritmetika dasar seperti penjumlahan, pengurangan, perkalian, pembagian, dan modulus. Hasil dari masing-masing operasi kemudian ditampilkan ke layar, sehingga pengguna dapat melihat perhitungan berdasarkan dua angka yang telah dimasukkan.
 
 ### 3. 
 
@@ -101,7 +101,7 @@ int main() {
     return 0;
 }
 ```
-penjelasan singkat guided 3
+Program C++ ini meminta pengguna memasukkan dua angka, lalu membandingkan keduanya untuk menentukan apakah angka pertama lebih besar, lebih kecil, atau sama dengan angka kedua. Setelah itu, program menampilkan menu sederhana berisi dua operasi aritmetika: penjumlahan dan pengurangan. Pengguna memilih salah satu opsi, dan program akan menghitung serta menampilkan hasil operasi berdasarkan dua angka yang telah dimasukkan sebelumnya. Jika pilihan tidak valid, program menampilkan pesan “Pilihan Salah.”
 
 ### 4. 
 
@@ -135,7 +135,7 @@ using namespace std;
     
  }
 ```
-penjelasan singkat guided 3
+Program C++ ini meminta pengguna memasukkan sebuah angka, lalu menampilkan tiga jenis perulangan berbeda. Pertama, program menggunakan for loop untuk menampilkan angka dari 0 hingga sebelum angka yang dimasukkan. Kedua, program memakai while loop untuk menampilkan angka dari 10 turun hingga lebih besar dari angka input. Terakhir, program menjalankan do-while loop yang menampilkan angka 10 satu kali karena kondisi perulangannya tidak terpenuhi. Program ini menunjukkan perbedaan cara kerja ketiga jenis looping dalam C++.
 
 ### 5. 
 
@@ -167,7 +167,7 @@ int main(){
     return 0;
 }
 ```
-penjelasan singkat guided 3
+Program C++ ini menyimpan data 5 siswa menggunakan struct yang berisi nama dan nilai. Program meminta pengguna memasukkan nama dan nilai setiap siswa melalui perulangan for. Setelah semua data dimasukkan, program menampilkan kembali seluruh nama dan nilai siswa menggunakan perulangan while. Program ini menunjukkan bagaimana cara menggunakan array of struct serta dua jenis looping untuk input dan output data.
 
 ## Unguided 
 
@@ -271,6 +271,12 @@ int main() {
 penjelasan unguided 2
 
 ### 3. (isi dengan soal unguided 3)
+
+
+
+
+
+
 
 ```C++
 #include <iostream>
