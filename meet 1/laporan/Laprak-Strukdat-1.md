@@ -171,7 +171,9 @@ Program C++ ini menyimpan data 5 siswa menggunakan struct yang berisi nama dan n
 
 ## Unguided 
 
-### 1. (isi dengan soal unguided 1)
+### 1.
+Buatlah program yang menerima input-an dua buah bilangan betipe float, kemudian memberikan output-an hasil penjumlahan, pengurangan, perkalian, dan pembagian dari dua bilangan tersebut.
+
 
 ```C++
 #include <iostream>
@@ -205,9 +207,10 @@ int main() {
 ![Alt Text](https://raw.githubusercontent.com/daffa-tsaqifna-f-if/103112400032_Daffa-Tsaqifna-Fauztsany/main/meet%201/unguided%20output/output-1.png)
 
 
-penjelasan unguided 1 
+Program C++ ini menggunakan dua fungsi untuk memisahkan proses input dan perhitungan. Fungsi input() meminta pengguna memasukkan dua angka dan menyimpannya menggunakan parameter referensi. Setelah itu, fungsi output() menampilkan hasil operasi aritmatika seperti penjumlahan, pengurangan, perkalian, dan pembagian berdasarkan angka yang sudah diinput. Program ini memperlihatkan penggunaan fungsi serta cara mengoper data antar fungsi dalam C++.
 
-### 2. (isi dengan soal unguided 2)
+### 2. 
+Buatlah sebuah program yang menerima masukan angka dan mengeluarkan output nilai angka tersebut dalam bentuk tulisan. Angka yang akan di-input-kan user adalah bilangan bulat positif mulai dari 0 s.d 100
 
 ```C++
 #include <iostream>
@@ -268,13 +271,11 @@ int main() {
 ![Deskripsi Gambar](https://raw.githubusercontent.com/daffa-tsaqifna-f-if/103112400032_Daffa-Tsaqifna-Fauztsany/main/meet%201/unguided%20output/output-2.png)
 
 
-penjelasan unguided 2
+Program C++ ini meminta pengguna memasukkan sebuah angka dengan batas maksimal 100. Jika angka yang dimasukkan lebih dari 100, program akan meminta input ulang. Setelah menerima angka yang valid, program mengubah angka tersebut menjadi bentuk teks dalam bahasa Indonesia. Program menangani berbagai kasus: angka 0–10, angka belasan, angka puluhan, serta angka 100. Dengan memanfaatkan operasi modulus, pembagian, dan array string, program dapat menentukan satuan serta puluhan untuk menghasilkan teks yang sesuai dengan nilai angka.
 
-### 3. (isi dengan soal unguided 3)
+### 3.
 
 ![soal](https://raw.githubusercontent.com/daffa-tsaqifna-f-if/103112400032_Daffa-Tsaqifna-Fauztsany/main/meet%201/unguided%20output/extra%20pic/Screenshot%202025-11-25%20094713.png)
-
-
 
 
 
@@ -328,7 +329,7 @@ int main() {
 ##### Output 3
 ![Deskripsi Gambar](https://raw.githubusercontent.com/daffa-tsaqifna-f-if/103112400032_Daffa-Tsaqifna-Fauztsany/main/meet%201/unguided%20output/output-3.png)
 
-penjelasan unguided 3
+Program C++ ini meminta pengguna memasukkan sebuah angka, lalu mencetak pola berbentuk simetri menggunakan angka menurun dan menaik yang dipisahkan oleh simbol *. Pola dibentuk dari dua bagian: yang pertama menurun dari angka input hingga 1, dan yang kedua sebuah garis tengah yang hanya menampilkan *. Setiap baris diberikan spasi yang semakin banyak untuk membentuk tampilan mirip segitiga terbalik di kiri dan kanan. Program ini menunjukkan penggunaan nested loop untuk membuat pola karakter yang rapi dan simetris.
 
 ## Kesimpulan
 ...
