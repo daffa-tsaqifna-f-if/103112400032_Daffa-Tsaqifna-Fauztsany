@@ -332,7 +332,7 @@ int main() {
 Program C++ ini meminta pengguna memasukkan sebuah angka, lalu mencetak pola berbentuk simetri menggunakan angka menurun dan menaik yang dipisahkan oleh simbol *. Pola dibentuk dari dua bagian: yang pertama menurun dari angka input hingga 1, dan yang kedua sebuah garis tengah yang hanya menampilkan *. Setiap baris diberikan spasi yang semakin banyak untuk membentuk tampilan mirip segitiga terbalik di kiri dan kanan. Program ini menunjukkan penggunaan nested loop untuk membuat pola karakter yang rapi dan simetris.
 
 ## Kesimpulan
-...
+Modul ini mengenalkan dasar-dasar C++ seperti input–output, operasi aritmatika, percabangan, perulangan, fungsi, dan struct. Melalui latihan, mahasiswa belajar membuat program sederhana, menghitung angka, mengolah data, dan membentuk pola. Praktikum ini membantu memahami struktur dasar program C++ dan cara menerapkan logika dasar dalam pemrograman.
 
 ## Referensi
 [1]Sulistyono, A. D., & Prabowo, R. Y. (2023). Peningkatan Kompetensi Algoritma dan Pemrograman C/C++. Kacanegara: Jurnal Pengabdian Kepada Masyarakat, 5(4), 191–200. Diakses dari https://ejournals.itda.ac.id/index.php/KACANEGARA/article/download/1689/pdf
