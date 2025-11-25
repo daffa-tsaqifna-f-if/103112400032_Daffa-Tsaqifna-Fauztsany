@@ -36,7 +36,7 @@ int main() {
     return 0;
 }
 ```
-penjelasan singkat guided 1
+Program C++ ini meminta pengguna memasukkan 5 nilai ke dalam sebuah array. Setelah semua nilai dimasukkan melalui perulangan for, program menampilkan kembali isi array tersebut menggunakan perulangan while. Tujuannya adalah menunjukkan cara menyimpan data dalam array dan cara menampilkan setiap elemennya berdasarkan indeks.
 
 ### 2. 
 
@@ -84,7 +84,7 @@ int main() {
     return 0;
 }
 ```
-penjelasan singkat guided 2
+Program C++ ini melakukan operasi penjumlahan dan perkalian pada dua matriks berukuran 2×2. Dua matriks awal (arrA dan arrB) sudah ditentukan nilainya. Program pertama-tama menjumlahkan kedua matriks elemen per elemen dan menyimpan hasilnya pada arrC, lalu menampilkannya. Setelah itu, program menghitung perkalian matriks menggunakan tiga tingkat perulangan dan menyimpan hasilnya pada arrD, kemudian menampilkannya melalui fungsi tampilkanhasil(). Program ini menunjukkan cara kerja operasi dasar matriks dalam C++.
 
 ### 3. 
 
@@ -108,7 +108,7 @@ int main() {
     return 0;
 }
 ```
-penjelasan singkat guided 3
+Program C++ ini menampilkan isi array dengan dua cara berbeda. Pertama, program menggunakan pointer (ptr) yang menunjuk ke elemen pertama array, lalu mengakses elemen-elemen berikutnya melalui operasi pointer arithmetic (*(ptr + i)). Kedua, program menampilkan elemen array menggunakan akses indeks biasa (arr[i]). Program ini menunjukkan perbedaan dan kesetaraan antara akses array menggunakan pointer dan menggunakan indeks.
 
 ### 4. 
 
@@ -130,71 +130,7 @@ void ubahnilai(int* ptr){
     
  }
 ```
-penjelasan singkat guided 4
-
-### 5. 
-
-```C++
-#include<iostream>
-using namespace std;
-
-void ubahnilai(int& ref){
-    ref = 20;
-}
-
-int main(){
-    int x = 10;
-    cout << "Nilai sebelum diubah: " << x << endl;
-    ubahnilai(x);
-    cout << "Nilai setelah diubah: " << x << endl;
-    return 0;
-}
-```
-penjelasan singkat guided 5
-
-### 6. 
-
-```C++
-#include <iostream>
-using namespace std;
-
-int carimax(int arr[], int ukuran) {
-    int max = arr[0];
-    for (int i = 1; i < ukuran; i++) {
-        if (arr[i] > max) {
-            max = arr[i];
-        }
-    }
-    return max;
-}
-
-void operasiaritmatika(int arr[], int ukuran){
-    int totaljumblah = 0;
-    for (int i = 0; i < ukuran; i++){
-        totaljumblah += arr[i];
-    }
-    cout << "Total jumblah: " << totaljumblah << endl;
-    int totalkali = 1;
-    for (int i = 0; i < ukuran; i++){
-        totalkali *= arr[i];
-    }
-    cout << "Total kali: " << totalkali << endl;
-}
-
-int main() {
-    const int ukuran = 5;
-    int arr[ukuran];
-    for (int i = 0; i < ukuran; i++){
-        cout << "Masukkan nilai array ke-" << i << ": ";
-        cin >> arr[i];
-    }
-    cout <<endl;
-    cout << "Nilai terbesar dalam array: " << carimax(arr, ukuran) << endl;
-    operasiaritmatika(arr, ukuran);
-    return 0;
-}
-```
-penjelasan singkat guided 6
+Program C++ ini meminta pengguna memasukkan sebuah angka, lalu menampilkan tiga jenis perulangan. Pertama, perulangan for menampilkan angka dari 0 hingga sebelum angka yang dimasukkan. Kedua, perulangan while menampilkan angka dari 10 turun hingga lebih besar dari angka input. Terakhir, do-while menampilkan angka 10 satu kali karena kondisi perulangannya tidak terpenuhi. Program ini memperlihatkan perbedaan cara kerja tiga jenis loop dalam C++.
 
 
 
@@ -358,7 +294,7 @@ int main() {
 ![Alt Text](https://raw.githubusercontent.com/daffa-tsaqifna-f-if/103112400032_Daffa-Tsaqifna-Fauztsany/main/meet%201/unguided%20output/output-1.png)
 
 
-penjelasan unguided 1 
+Program C++ ini bekerja dengan dua matriks berukuran 3×3 (A dan B) dan menyediakan menu interaktif bagi pengguna. Di dalamnya terdapat beberapa fungsi: menampilkan matriks, menukar isi matriks A dan B, serta melakukan operasi penjumlahan, pengurangan, dan perkalian matriks. Program berjalan dalam loop sehingga pengguna bisa memilih operasi berkali-kali sampai memilih menu keluar. Program ini memperlihatkan bagaimana memanipulasi matriks menggunakan fungsi terpisah serta mengolah operasi dasar matriks dalam bentuk menu.
 
 ### 2. 
 Buatlah program menghitung luas dan keliling persegi panjang dengan proses perhitungan 
@@ -418,12 +354,12 @@ int main() {
 ![Deskripsi Gambar](https://raw.githubusercontent.com/daffa-tsaqifna-f-if/103112400032_Daffa-Tsaqifna-Fauztsany/main/meet%201/unguided%20output/output-2.png)
 
 
-penjelasan unguided 2
+Program C++ ini menggunakan pointer untuk mengakses dan memanipulasi nilai panjang dan lebar sebuah persegi panjang. Fungsi output1() menampilkan nilai awal, output2() menghitung luas dan keliling berdasarkan nilai tersebut, dan output3() mengubah nilai panjang dan lebar melalui pointer lalu menampilkan hasil perubahannya. Program ini menunjukkan bagaimana pointer dapat digunakan untuk membaca dan mengubah data secara langsung dari variabel aslinya.
 
 
 
 ## Kesimpulan
-...
+Modul ini mengajarkan penggunaan array, fungsi, dan pointer dalam C++. Mahasiswa belajar mengolah data, membuat program modular, dan memahami cara kerja pointer lewat berbagai tugas program. Praktikum memperkuat dasar logika dan struktur program C++.
 
 ## Referensi
 [1]Narounta, F. G., & Adrian, F. (2019). Perancangan Game Edukasi C++ Programming Sebagai Media Pembelajaran Logika Pemrograman. Jurnal SIFO Mikroskil.
