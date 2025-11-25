@@ -272,8 +272,7 @@ penjelasan unguided 2
 
 ### 3. (isi dengan soal unguided 3)
 
-soal
-(https://github.com/daffa-tsaqifna-f-if/103112400032_Daffa-Tsaqifna-Fauztsany/blob/main/meet%201/unguided%20output/extra%20pic/Screenshot%202025-11-25%20094713.png?raw=true)
+![soal](https://raw.githubusercontent.com/daffa-tsaqifna-f-if/103112400032_Daffa-Tsaqifna-Fauztsany/main/meet%201/unguided%20output/extra%20pic/Screenshot%202025-11-25%20094713.png)
 
 
 
