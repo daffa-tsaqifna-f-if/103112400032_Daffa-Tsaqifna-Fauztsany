@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+//tidak membaca bahwa harus ADT
 const int MAX=5;
 
 struct mahasiswa{
@@ -27,6 +27,10 @@ bool isFull(Stack S) {
 }
 
 
+
+void inputs(string nama,string NIM, float tugas, float UTS, float UAS){
+}
+
 void push(Stack &S, mahasiswa value) {
     if (S.top < MAX-1) {
         S.top++;
@@ -48,6 +52,8 @@ void pop(Stack &S) {
 
 
 int main() {
-    
+    Stack s;
+    createStack (s);
+
     return 0;
 }

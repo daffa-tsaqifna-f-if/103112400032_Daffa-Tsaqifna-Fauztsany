@@ -32,7 +32,7 @@ void createQueue(Queue &Q) {
     Q.count = 0;
 }
 
-void enqueue(Queue &Q, int x) {
+void enqueue(Queue &Q,  x) {
     if (!isFull(Q)) {
         Q.info[Q.tail] = x;
         Q.tail = (Q.tail + 1) % MAX;
