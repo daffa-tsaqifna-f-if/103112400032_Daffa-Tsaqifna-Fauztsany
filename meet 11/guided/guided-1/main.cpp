@@ -19,3 +19,4 @@ int main() {
     printGraph(G);
     return 0;
 }
+//TEST
