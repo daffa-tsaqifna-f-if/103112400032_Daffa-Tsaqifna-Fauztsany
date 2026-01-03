@@ -1,106 +1,138 @@
+#include "mll.h"
 #include <iostream>
 using namespace std;
 
-typedef struct node *address;
-
-struct node {
-    string DATA;
-    address next;
-};
-
-struct linkedlist {
-    address first;
-};
-
-void createList(linkedlist &List) {
-    List.first = NULL;
+void createListParent(MultiLinkedList &L) {
+    L.first = NULL;
+    L.last = NULL;
 }
 
-void insertFirst(linkedlist &List, string value) {
-    address newNode = new node;
-    newNode->DATA = value;
-    newNode->next = List.first;
-    List.first = newNode;
+elmGenre* newGenre(string id, string nama) {
+    elmGenre* P = new elmGenre;
+    P->info.IDGenre = id;
+    P->info.namaGenre = nama;
+    P->next = NULL;
+    P->prev = NULL;
+    P->firstChild = NULL;
+    return P;
 }
 
+elmFilm* newFilm(string id, string judul, int durasi, int tahun, float rating) {
+    elmFilm* C = new elmFilm;
+    C->info.IDFilm = id;
+    C->info.judulFilm = judul;
+    C->info.durasiFilm = durasi;
+    C->info.tahunTayang = tahun;
+    C->info.ratingFilm = rating;
+    C->next = NULL;
+    C->prev = NULL;
+    return C;
+}
 
-void deletel(linkedlist &List, string value) {
-    if (List.first != NULL) {
-        address temp = List.first;
-        while (List.first != NULL){
-            if (temp->next->DATA == value){
-                temp->next = temp->next->next;
-                List.first = temp;
-            }else{
-                temp= temp->next;
-            }
-        }
-    }else{
-        cout << "not found cant delete";
+void insertFirstParent(MultiLinkedList &L, elmGenre* P) {
+    if (L.first == NULL) {
+        L.first = P;
+        L.last = P;
+    } else {
+        P->next = L.first;
+        L.first->prev = P;
+        L.first = P;
     }
 }
 
-void printList(linkedlist List) {
-    address temp = List.first;
-    while (temp != NULL) {
-        cout << temp->DATA << " ";
-        temp = temp->next;
-    }
-}
-
-int genap (linkedlist List){
-    address temp = List.first;
-    int x;
-    while (temp !=nullptr){
-        if (temp->DATA == "idk" ){
-            x++;
-            temp = temp->next;
-        }else{
+void insertLastChild(elmGenre* P, elmFilm* C) {
+    if (P->firstChild == NULL) {
+        P->firstChild = C;
+    } else {
+        elmFilm* temp = P->firstChild;
+        while (temp->next != NULL) {
             temp = temp->next;
         }
+        temp->next = C;
+        C->prev = temp;
     }
-    return x;
 }
 
+void deleteAllChild(elmGenre* P) {
+    elmFilm* C = P->firstChild;
+    while (C != NULL) {
+        elmFilm* temp = C;
+        C = C->next;
+        delete temp;
+    }
+    P->firstChild = NULL;
+}
 
+void deleteAfterParent(MultiLinkedList &L, string IDGenrePrev) {
+    elmGenre* prec = L.first;
 
-int main() {
-    int x;
-    string y;
-    linkedlist ll;
-    createList(ll);
+    while (prec != NULL && prec->info.IDGenre != IDGenrePrev) {
+        prec = prec->next;
+    }
 
-    while (true){
-        cout<<"menu \n1. insert\n2. delete\n3. view\n4. hitung genap\n0. EXIT"<<endl;
-        cin >> (x);
-        switch (x){
-            case 1:
-                cout << "masukan nama : ";
-                cin >> y;
-                insertFirst(ll,y);
-                break;
-            case 2:
-                cout << "masukan nama untuk delete";
-                cin >> y;
-                deletel(ll,y);
-                break;
-            case 3:
-                printList(ll);
-                break;
-            case 4:
-                cout << "jumblah nama dengan huruf genap";
-                cout << genap(ll);
-                break;
-            case 0:
-                return 0;
-                break;
-            default:
-                break;
-            }
+    if (prec == NULL || prec->next == NULL) {
+        cout << "Node tidak ditemukan\n";
+        return;
+    }
+
+    elmGenre* target = prec->next;
+
+    deleteAllChild(target);
+
+    prec->next = target->next;
+    if (target->next != NULL) {
+        target->next->prev = prec;
+    } else {
+        L.last = prec;
+    }
+
+    delete target;
+}
+
+void printStrukturMLL(MultiLinkedList L) {
+    elmGenre* P = L.first;
+
+    while (P != NULL) {
+        cout << "ID Genre   : " << P->info.IDGenre << endl;
+        cout << "Nama Genre : " << P->info.namaGenre << endl;
+
+        elmFilm* C = P->firstChild;
+        if (C == NULL) {
+            cout << "  (Tidak ada film)\n";
         }
 
-       
-    
+        while (C != NULL) {
+            cout << "  Judul  : " << C->info.judulFilm << endl;
+            cout << "  Tahun  : " << C->info.tahunTayang << endl;
+            cout << "  Rating : " << C->info.ratingFilm << endl;
+            C = C->next;
+        }
 
-    return 0;
+        cout << "----------------------\n";
+        P = P->next;
+    }
+}
+
+void searchFilmByRatingRange(MultiLinkedList L, float minRating, float maxRating) {
+    elmGenre* P = L.first;
+    bool found = false;
+
+    while (P != NULL) {
+        elmFilm* C = P->firstChild;
+        while (C != NULL) {
+            if (C->info.ratingFilm >= minRating && C->info.ratingFilm <= maxRating) {
+                found = true;
+                cout << "Judul Film : " << C->info.judulFilm << endl;
+                cout << "Rating     : " << C->info.ratingFilm << endl;
+                cout << "Genre      : " << P->info.namaGenre << endl;
+                cout << "-----------------\n";
+            }
+            C = C->next;
+        }
+        P = P->next;
+    }
+
+    if (!found) {
+        cout << "Tidak ada film dalam range tersebut\n";
+    }
 }
