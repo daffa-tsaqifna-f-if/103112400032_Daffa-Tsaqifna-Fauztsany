@@ -6,7 +6,41 @@
 
 ## Guided 
 
-### 1. pisah
+### 1. gabung
+
+```C++
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+struct mahasiswa {
+    char nim[10];
+    int nilai1, nilai2;
+};
+
+void inputMhs(mahasiswa &m) {
+    cout << "Input NIM: ";
+    cin >> m.nim;
+    cout << "Input Nilai 1: ";
+    cin >> m.nilai1;
+    cout << "Input Nilai 2: ";
+    cin >> m.nilai2;
+}
+
+float rata2(mahasiswa m) {
+    return (float)(m.nilai1 + m.nilai2) / 2;
+}
+
+int main() {
+    mahasiswa mhs;
+    inputMhs(mhs);
+    cout << "nilai rata Rata-rata adalah : " << rata2(mhs) << endl;
+    system("pause");
+    return 0;
+}
+```
+### 2. pisah
 
 #### mahasiswa.h
 
@@ -64,103 +98,108 @@ int main() {
     return 0;
 }
 ```
-penjelasan singkat guided 3
 
-### 2. gabung
 
-```C++
-#include <iostream>
-#include <cstdlib>
-
-using namespace std;
-
-struct mahasiswa {
-    char nim[10];
-    int nilai1, nilai2;
-};
-
-void inputMhs(mahasiswa &m) {
-    cout << "Input NIM: ";
-    cin >> m.nim;
-    cout << "Input Nilai 1: ";
-    cin >> m.nilai1;
-    cout << "Input Nilai 2: ";
-    cin >> m.nilai2;
-}
-
-float rata2(mahasiswa m) {
-    return (float)(m.nilai1 + m.nilai2) / 2;
-}
-
-int main() {
-    mahasiswa mhs;
-    inputMhs(mhs);
-    cout << "nilai rata Rata-rata adalah : " << rata2(mhs) << endl;
-    system("pause");
-    return 0;
-}
-```
-penjelasan singkat guided 3
-
-### 5. 
-
-```C++
-#include<iostream>
-using namespace std;
-
-int main(){
-    const int MAX = 5;
-    struct rapot{
-        string nama;
-        float nilai;
-    };
-    rapot siswa[MAX];
-
-    for(int i = 0; i < MAX; i++){
-        cout << "masukkan nama siswa : ";
-        cin >> siswa[i].nama;
-        cout << endl;
-        cout << "masukkan nilai siswa : ";
-        cin >> siswa[i].nilai;
-    }
-
-    int j = 0;
-    while(j < MAX){
-        cout << "nama siswa : " << siswa[j].nama << ", nilai : " << siswa[j].nilai << endl;
-        j++;
-    }
-    return 0;
-}
-```
-penjelasan singkat guided 3
 
 ## Unguided 
 
-### 1. (isi dengan soal unguided 1)
+### 1. 
+
+![alt text](image.png)
 
 ```C++
 #include <iostream>
 using namespace std;
 
-int input(int &angka, int &angka2) {
-    cout<<"Masukkan angka pertama: ";
-    cin>>angka;
-    cout<<"Masukkan angka kedua: ";
-    cin>>angka2;
-    return 0;
+const int MAX = 10;
+
+float Nakhir(float x,float y, float z){
+    return (0.3*x)+(0.4*y)+(0.3*z);
 }
 
-void output(int angka, int angka2) {
-    cout<<"hasil penjumlahan: "<<angka+angka2<<endl;
-    cout<<"hasil pengurangan: "<<angka-angka2<<endl;
-    cout<<"hasil perkalian: "<<angka*angka2<<endl;
-    cout<<"hasil pembagian: "<<angka/angka2<<endl;
+struct mahasiswa_data{
+    string Nama,NIM;
+    float uts,uas,tugas;
+    float nilai_akhir;
+};
+
+struct mahasiswa_list{
+    mahasiswa_data list[MAX];
+    int jumlah = 0;
+};
+
+
+void DataSafe(mahasiswa_list &m){
+    if (m.jumlah >= MAX){
+        cout << "data penuh";
+        return;
+    }
+
+    cout << "Masukan Nama  : ";
+    cin >> m.list[m.jumlah].Nama;
+
+    cout << "Masukan NIM   : ";
+    cin >> m.list[m.jumlah].NIM;
+
+    cout << "Masukan UTS   : ";
+    cin >> m.list[m.jumlah].uts;
+
+    cout << "Masukan UAS   : ";
+    cin >> m.list[m.jumlah].uas;
+
+    cout << "Masukan Tugas : ";
+    cin >> m.list[m.jumlah].tugas;
+
+    m.list[m.jumlah].nilai_akhir = Nakhir( m.list[m.jumlah].uts,m.list[m.jumlah].uas,m.list[m.jumlah].tugas);
+
+    m.jumlah++;
+    cout << "data sudah di masukan";
 }
+
+void Show(mahasiswa_list m){
+    if (m.jumlah == 0){
+        cout << "Data Masih Kosong";
+    }
+
+     for (int i = 0; i < m.jumlah; i++){
+        cout << "\nData ke-" << i + 1 << endl;
+        cout << "Nama           : " << m.list[i].Nama << endl;
+        cout << "NIM            : " << m.list[i].NIM << endl;
+        cout << "UTS            : " << m.list[i].uts << endl;
+        cout << "UAS            : " << m.list[i].uas << endl;
+        cout << "Tugas          : " << m.list[i].tugas << endl;
+        cout << "Nilai Akhir  : " << m.list[i].nilai_akhir << endl;
+    }
+}
+
+
 
 int main() {
-    int x,y;
-    input(x,y);
-    output(x,y);
+    mahasiswa_list mhs;
+    int choice;
+
+    while (true){
+        cout << "Apa yang ingin di lakuka\n";
+        cout << "1. Masukan Data\n";
+        cout << "2. Lihat data(full)\n";
+        cout << "0. Exit\n";
+        cout << "Choice: ";
+        cin >> choice;
+        switch (choice){
+        case 1:
+            DataSafe(mhs);        
+            break;
+        case 2:
+            Show(mhs);
+            break;
+        case 0:
+            cout << "bye";
+            return 0;
+        default:
+            cout << "Pilihan tidak valid\n";
+            break;
+        }
+    }
     return 0;
 }
 ```

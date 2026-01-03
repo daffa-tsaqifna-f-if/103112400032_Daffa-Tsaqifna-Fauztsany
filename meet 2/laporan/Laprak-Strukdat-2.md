@@ -116,21 +116,33 @@ Program C++ ini menampilkan isi array dengan dua cara berbeda. Pertama, program 
 #include <iostream>
 using namespace std;
 
-void ubahnilai(int* ptr){
-    *ptr = 20;
-}
-
-
  int main(){
-    int x = 10;
-    cout << "Nilai sebelum diubah: " << x << endl;
-    ubahnilai(&x);
-    cout << "Nilai setelah diubah: " << x << endl;
+    int angka1;
+    cout << "masukan angka1 : ";
+    cin >> angka1;
+
+    for (int i = 0; i  < angka1; i++){
+      cout << i << " - ";
+    }
+    cout << endl;
+
+    int j = 10;
+    while (j > angka1){
+      cout << j << " - ";
+      j--;
+    }
+
+    cout << endl;
+    int k = 10;
+    do {
+      cout << k << " - ";
+    }while (k < angka1);
+
      return  0;
     
  }
 ```
-Program C++ ini meminta pengguna memasukkan sebuah angka, lalu menampilkan tiga jenis perulangan. Pertama, perulangan for menampilkan angka dari 0 hingga sebelum angka yang dimasukkan. Kedua, perulangan while menampilkan angka dari 10 turun hingga lebih besar dari angka input. Terakhir, do-while menampilkan angka 10 satu kali karena kondisi perulangannya tidak terpenuhi. Program ini memperlihatkan perbedaan cara kerja tiga jenis loop dalam C++.
+Program C++ ini meminta pengguna memasukkan sebuah angka, lalu menampilkan deretan nilai menggunakan perulangan for, while, dan do-while. Program ini bertujuan menunjukkan perbedaan cara kerja ketiga jenis perulangan tersebut dalam menampilkan data.
 
 
 
@@ -139,23 +151,22 @@ Program C++ ini meminta pengguna memasukkan sebuah angka, lalu menampilkan tiga 
 ### 1. 
 Diketahui 2 buah matriks 3x3 seperti dibawah ini : 
  
-matriksA =
+$$
+\text{matriksA} =
+\begin{bmatrix}
+7 & 12 & 22 \\
+31 & 6 & 41 \\
+15 & 19 & 36
+\end{bmatrix}
+\quad
+\text{MatriksB} =
+\begin{bmatrix}
+11 & 34 & 7 \\
+3 & 25 & 41 \\
+5 & 18 & 33
+\end{bmatrix}
+$$
 
-[7 12 22
-
-31 6 41
-
-15 19 36]
- 
- 
- 
- MatriksB = 
-
-[11 34 7
-
-3 25 41
-
-5 18 33]
  
 Buatlah program yang dapat melakukan operasi penjumlahan, pengurangan, dan perkalian 
 matriks 3x3 tersebut. Buat prosedur untuk masing-masing operasi yang dilakukan; 
