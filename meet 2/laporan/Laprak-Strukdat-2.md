@@ -302,7 +302,7 @@ int main() {
 ### Output Unguided 1 :
 
 ##### Output 1
-![Alt Text](https://raw.githubusercontent.com/daffa-tsaqifna-f-if/103112400032_Daffa-Tsaqifna-Fauztsany/main/meet%201/unguided%20output/output-1.png)
+![Alt Text](https://raw.githubusercontent.com/daffa-tsaqifna-f-if/103112400032_Daffa-Tsaqifna-Fauztsany/main/meet%202/unguided%20output/output-1.png)
 
 
 Program C++ ini bekerja dengan dua matriks berukuran 3×3 (A dan B) dan menyediakan menu interaktif bagi pengguna. Di dalamnya terdapat beberapa fungsi: menampilkan matriks, menukar isi matriks A dan B, serta melakukan operasi penjumlahan, pengurangan, dan perkalian matriks. Program berjalan dalam loop sehingga pengguna bisa memilih operasi berkali-kali sampai memilih menu keluar. Program ini memperlihatkan bagaimana memanipulasi matriks menggunakan fungsi terpisah serta mengolah operasi dasar matriks dalam bentuk menu.
@@ -362,7 +362,8 @@ int main() {
 ### Output Unguided 2 :
 
 ##### Output 2
-![Deskripsi Gambar](https://raw.githubusercontent.com/daffa-tsaqifna-f-if/103112400032_Daffa-Tsaqifna-Fauztsany/main/meet%201/unguided%20output/output-2.png)
+![Deskripsi Gambar](https://raw.githubusercontent.com/daffa-tsaqifna-f-if/103112400032_Daffa-Tsaqifna-Fauztsany/main/meet%202/unguided%20output/output-2.png
+)
 
 
 Program C++ ini menggunakan pointer untuk mengakses dan memanipulasi nilai panjang dan lebar sebuah persegi panjang. Fungsi output1() menampilkan nilai awal, output2() menghitung luas dan keliling berdasarkan nilai tersebut, dan output3() mengubah nilai panjang dan lebar melalui pointer lalu menampilkan hasil perubahannya. Program ini menunjukkan bagaimana pointer dapat digunakan untuk membaca dan mengubah data secara langsung dari variabel aslinya.
