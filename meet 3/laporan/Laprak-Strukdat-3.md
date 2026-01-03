@@ -104,9 +104,9 @@ int main() {
 ## Unguided 
 
 ### 1. 
-
-![alt text](image.png)
-
+#### soal:
+Buat program yang dapat menyimpan data mahasiswa (max. 10) ke dalam sebuah array dengan field nama, nim, uts, uas, tugas, dan nilai akhir. Nilai akhir diperoleh dari FUNGSI dengan rumus 0.3*uts+0.4*uas+0.3*tugas.
+#### code:
 ```C++
 #include <iostream>
 using namespace std;
@@ -206,12 +206,44 @@ int main() {
 ### Output Unguided 1 :
 
 ##### Output 1
-![Alt Text](https://raw.githubusercontent.com/daffa-tsaqifna-f-if/103112400032_Daffa-Tsaqifna-Fauztsany/main/meet%201/unguided%20output/output-1.png)
-
 
 penjelasan unguided 1 
 
-### 2. (isi dengan soal unguided 2)
+### 2.
+
+Buatlah ADT pelajaran sebagai berikut di dalam file "pelajaran.h":
+```
+Type pelajaran <
+namamapel : string
+kodemapel : string
+>
+
+function create_pelajaran (namapel : string, kodepel : string) → pelajaran
+
+procedure tampil_pelajaran (input pel pelajaran )
+```
+
+Buatlah implementasi ADT pelajaran pada file "pelajaran.cpp"
+
+Cobalah hasil implementasi ADT pada file "main.cpp"
+```C++
+using namespace std;
+
+int main() {
+
+string namapel = "Struktur Data";
+
+string kodepel = "STD";
+
+pelajaran pel = create_pelajaran (namapel, kodepel);
+
+tampil_pelajaran (pel);
+
+return 0;
+
+}
+```
+Gambar 3-1 main.cpp pelajaran
 
 ```C++
 #include <iostream>
